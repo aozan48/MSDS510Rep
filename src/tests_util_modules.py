@@ -1,6 +1,6 @@
-'''import sys
+import sys
 sys.path.append(sys.path[1]+ '\modules')
-import dateUtility'''
+import dateUtility
 from modules.dateUtility import get_date_joined, days_since_joined
 
 records = [

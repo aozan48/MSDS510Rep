@@ -110,16 +110,7 @@ def transform_record(rdict):
     Returns:
         a dictionary with newly formatted values
     """
-    rdict["appearances"] = to_int(rdict["appearances"])
-    rdict["current"] = to_bool(rdict["current"])
-    rdict["year"] = to_int(rdict["year"])
-    rdict['years_since_joining'] = datetime.date.today().year - rdict['year']
-    rdict["notes"] = clean_notes(rdict["notes"])
-    rdict["month_joinded"] = date.get_month(
-        rdict["full_reserve_avengers_intro"]
-    )
+    rdict['year'] = to_int(rdict['year'])
 
-    for key, val in rdict.items():
-        if (key.startswith('death') or key.startswith('return')):
-            rdict[key] = to_bool(rdict[key])
+
     return rdict
